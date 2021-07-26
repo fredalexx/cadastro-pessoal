@@ -1,9 +1,11 @@
-function Enviar() {
-
-  var nome = document.getElementById("nome");
-
-  if (nome.value != "") {
-      alert('Obrigado sr(a) ' + nome.value + ' os seus dados foram encaminhados com sucesso');
+function validarFormulario(){
+  var nomePessoa = document.forms["formCadastro"]["nome"].value;
+  if (nomePessoa == "") {
+      alert("Favor informar o seu nome!");
+      return false;     
   }
-
+  else{
+      alert("Olá, " + nomePessoa + " seus dados foram cadastrados!");
+      return true;
+  }
 }
